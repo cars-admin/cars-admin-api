@@ -1,6 +1,6 @@
 ### Cars admin API
 
-[Web Client in this repo](https://github.com/cars-admin/cars-admin-client)
+[Web Client in this link](https://github.com/cars-admin/cars-admin-client)
 
 #### Admin section
 ![Image of cars admin section](./cars-admin.png)
