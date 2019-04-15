@@ -98,9 +98,9 @@ return [
     | been provided here, which will work well on most of your systems.
     |
     */
-
-    'sendmail' => '/usr/sbin/sendmail -bs',
-
+    // Alternative: /usr/sbin/sendmail -bs
+    'sendmail' => '/usr/lib/sendmail -t',
+    'pretend' => false,
     /*
     |--------------------------------------------------------------------------
     | Markdown Mail Settings
@@ -121,3 +121,26 @@ return [
     ],
 
 ];
+
+
+/* Documentation
+
+'driver' => 'smtp',
+
+'host' => 'localhost',
+
+'port' => 587,
+
+'from' => array('address' => 'myemail@your_godaddy_domain_name.com', 'name' => 'name'),
+
+'encryption' => 'tls',
+
+'username' => 'your cPanel username',
+
+'password' => 'your cPanel password',
+
+'sendmail' => '/usr/lib/sendmail -t',
+
+'pretend' => false,
+
+*/

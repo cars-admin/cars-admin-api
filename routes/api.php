@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Http\Request;
+use carsadmin\Mail\Order;
+use Illuminate\Support\Facades\Mail;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +36,10 @@ Route::group(['middleware' => ['auth:api']], function () {
 			// Route::get('/spe/products/available','ProductController@indexAvailable');
 			Route::get('/public/share/product/facebook/{product}', 'ProductController@shareFacebook');
 			Route::get('/public/share/image_product/facebook/{product}', 'ProductController@shareImageFacebook');
+
+			Route::get('/test/mail', function () {
+				Mail::to('stivenson.rpm@gmail.com')->send(new Order(''));
+			});
 
 			// logout 
 			Route::get('/public/logout','SessionController@invalidateToken');
